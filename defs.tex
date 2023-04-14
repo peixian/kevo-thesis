@@ -26,7 +26,6 @@
 
 % Set the fonts
 
-
 % For typesetting inference rules
 \usepackage{mathpartir}
 % \usepackage{pftools}  % A local package
@@ -48,7 +47,7 @@
 \renewcommand\thesubfigure{(\alph{subfigure})}
 
 \usepackage[T1]{fontenc} % needed for scaling fancy fonts (?)
-\usepackage[utf8]{inputenc} % not sure this is needed
+\usepackage[utf8]{} % not sure this is needed
 \usepackage{fontspec}
 
 \usepackage{amssymb}
@@ -120,7 +119,12 @@
 \usepackage{polyglossia}
 \setdefaultlanguage{english}
 \setotherlanguage{arabic}
-\setmainfont{Times New Roman}
+\setmainfont{STIX Two}[
+  UprightFont={* Math},
+  ItalicFont={* Text Italic},
+  BoldFont={* Text Bold},
+  BoldItalicFont={* Text Bold Italic},
+]
 
 \newfontfamily\arabicfont[Script=Arabic,ItalicFont=*,Scale=1.75]{Scheherazade}
 
@@ -128,16 +132,16 @@
 %% Place here your \newtheorem's:
 %%
 
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\theoremstyle{definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{definition}[theorem]{Definition}
-\theoremstyle{plain}
+% \theoremstyle{plain}
+% \newtheorem{theorem}{Theorem}[chapter]
+% \newtheorem{conjecture}[theorem]{Conjecture}
+% \newtheorem{proposition}[theorem]{Proposition}
+% \newtheorem{lemma}[theorem]{Lemma}
+% \newtheorem{corollary}[theorem]{Corollary}
+% \theoremstyle{definition}
+% \newtheorem{example}[theorem]{Example}
+% \newtheorem{definition}[theorem]{Definition}
+% \theoremstyle{plain}
 
 
 % ----------------------------------------
@@ -228,7 +232,16 @@
 
 
 % Put your definitions here
-
+\newcommand{\arahamza}{{\fontspec{Symbola}\char"02BE}}
+\newcommand{\arah}{{\fontspec{Symbola}\char"1E25}}
+\newcommand{\aras}{{\fontspec{Symbola}\char"1E63}}
+\newcommand{\arad}{{\fontspec{Symbola}\char"1E0D}}
+\newcommand{\arat}{{\fontspec{Symbola}\char"1E6D}}
+\newcommand{\arath}{{\fontspec{Symbola}\char"1E93}}
+\newcommand{\araayn}{{\fontspec{Symbola}\char"02BF}}
+\newcommand{\araalif}{{\fontspec{Symbola}\char"1D44E\char"0304}}
+\newcommand{\arawaw}{{\fontspec{Symbola}\char"1D462\char"0304}}
+\newcommand{\araei}{{\fontspec{Symbola}\char"1D73E\char"0304}}
 
 %%% Local Variables:
 %%% mode: latex
